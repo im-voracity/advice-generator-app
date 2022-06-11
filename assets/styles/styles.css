@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Manrope:wght@800&display=swap");
+
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-greyish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+  --main-font-size: 1.75rem;
+  --mt-red: hsl(360, 69%, 42%);
+  --mt-blue: hsl(240, 69%, 42%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+}
+
+:where(a, a:visited, a:hover) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.fem {
+  color: var(--neon-green);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  width: 100vw;
+  background-color: var(--dark-blue);
+}
+
+section {
+  background-color: var(--dark-greyish-blue);
+  height: 20.75rem;
+  width: 33.75rem;
+  border-radius: 15px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8125rem;
+  letter-spacing: 4.09px;
+  color: var(--neon-green);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.container {
+  padding: 3rem;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.advice {
+  font-size: 1.75rem;
+  letter-spacing: -0.3px;
+  color: var(--light-cyan);
+  text-align: center;
+}
+
+.divisor-desktop,
+.divisor-mobile {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 4rem;
+}
+
+.new-advice {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem;
+  background-color: var(--neon-green);
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  bottom: 0;
+  margin-bottom: -1.9rem;
+  transition: box-shadow 0.3s;
+}
+
+.new-advice:hover {
+  box-shadow: 0 0 35px var(--neon-green);
+}
+
+.new-advice svg {
+  fill: var(--dark-blue);
+}
+
+footer {
+  height: 5vh;
+  width: 100vw;
+  background-color: var(--dark-blue);
+}
+
+.attribution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+
+.fem {
+  color: var(--neon-green);
+}
+
+.coded {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mt-logo {
+  font-family: "Abril Fatface", cursive;
+  font-size: inherit;
+  text-transform: lowercase;
+  display: flex;
+  flex-direction: column;
+  color: var(--mt-red);
+  margin-left: 0.3rem;
+  letter-spacing: 0.5px;
+}
+
+.l1 {
+  position: absolute;
+}
+
+.l2 {
+  position: relative;
+  margin-top: 8.5px;
+  margin-left: 5.5px;
+  color: var(--mt-blue);
+}
+
+.l2 span {
+  color: var(--mt-red);
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    background-color: var(--dark-blues);
+    height: 100vh;
+    width: 100vw;
+  }
+
+  main {
+    padding: 0 1rem;
+    height: 90%;
+    width: 100%;
+  }
+
+  section {
+    width: 21.4375rem;
+    min-height: 19.6875rem;
+  }
+
+  h1 {
+    font-size: 0.6875rem;
+  }
+
+  .advice {
+    font-size: 1.5rem;
+    max-height: 3rem;
+  }
+
+  .divisor-desktop {
+    display: none;
+  }
+
+  .divisor-mobile {
+    display: block;
+  }
+
+  footer {
+    height: 10%;
+    width: 100%;
+    color: var(--dark-blue);
+  }
+
+  .attribution {
+    flex-direction: column;
+    gap: 0;
+  }
+}
